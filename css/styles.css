@@ -2770,7 +2770,7 @@ td:last-child {
 }
 
 .text-display-title {
-	font-size     : var(--text-display-2);
+	font-size     : var(--text-display-1);
 	line-height   : 1.0606;
 	letter-spacing: -0.012em;
 	color         : var(--color-text-dark);
@@ -3579,7 +3579,7 @@ td:last-child {
 	--content-padding-bottom: 10.8rem;
 	--content-min-height    : calc(var(--vspace-1) * 27);
 	z-index                 : 2;
-	background-color        : var(--color-2-dark);
+	background-color        : var(--color-2-light);
 	background              : linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%);
 	width                   : 100%;
 	height                  : max(var(--content-min-height), 100vh);
@@ -3631,7 +3631,7 @@ td:last-child {
 }
 
 .s-intro__content-title {
-	font-size    : clamp(5rem, 7vw, 11.6rem);
+	font-size    : clamp(4rem, 5vw, 10.6rem);
 	line-height  : 1;
 	margin-top   : 0;
 	margin-bottom: var(--vspace-1_25);
@@ -3854,7 +3854,7 @@ td:last-child {
 	}
 
 	.s-intro__content-title {
-		font-size: clamp(4rem, 10vw, 10.4rem);
+		font-size: clamp(3rem, 8vw, 9.4rem);
 	}
 
 	.s-intro__content-title br {
