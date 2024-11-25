@@ -3579,13 +3579,11 @@ td:last-child {
 	--content-padding-bottom: 10.8rem;
 	--content-min-height    : calc(var(--vspace-1) * 27);
 	z-index                 : 2;
-	/* background-color        : var(--color-2-dark);
-	background              : linear-gradient(20deg, hsl(130deg, 8%, 14%) 40%, hsl(0deg, 0%, 13%) 100%); */
 	width                   : 100%;
 	height                  : max(var(--content-min-height), 100vh);
 	overflow                : hidden;
 	position                : relative;
-    background: url('images/intro-bg.JPG') center center/cover no-repeat;
+    background: url('/images/intro-bg.jpg') center center/cover no-repeat;
     opacity: 0.8;
 }
 
