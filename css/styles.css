@@ -3585,7 +3585,7 @@ td:last-child {
 	height                  : max(var(--content-min-height), 100vh);
 	overflow                : hidden;
 	position                : relative;
-    background: url('/images/intro-bg.JPG') center center/cover no-repeat;
+    background: url('images/intro-bg.JPG') center center/cover no-repeat;
     opacity: 0.8;
 }
 
