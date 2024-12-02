@@ -2804,7 +2804,7 @@ td:last-child {
 	font-weight      : 500;
 	font-size        : 1.1em;
 	line-height      : 1;
-	color            : var(--color-2-light);
+	color            : var(--color-1-light);
 	margin-right     : var(--vspace-0_25);
 	margin-bottom    : var(--vspace-0_25);
 }
@@ -4740,3 +4740,82 @@ td:last-child {
 .contact-list li {
 	padding-left: 0;
 }
+
+/* --------------------------------------------------------------------
+ * ## expertise page
+ * -------------------------------------------------------------------- */
+ .events-list {
+    margin-bottom: var(--vspace-2);
+}
+
+.events-list__item {
+    background: var(--color-body);
+    border-radius: var(--border-radius);
+    padding: var(--vspace-2);
+    color: var(--color-text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.events-list__item-title {
+    font-family: var(--font-1);
+    font-size  : clamp(4rem, 1vw, var(--text-display-3));
+    font-weight: 600;
+    color: var(--color-1-light);
+    margin-bottom: var(--vspace-1_25);
+}
+
+.events-list__description {
+    font-family: var(--font-1);
+    font-size  : var(--text-size);
+    line-height: var(--vspace-1_25);
+    color: var(--color-text-light);
+    margin-bottom: var(--vspace-2);
+}
+
+.events-list__meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--vspace-0_5);
+}
+
+.events-list__meta-item-icon {
+    font-size: var(--text-lg);
+    color: var(--color-1);
+}
+
+.events-list__meta-item-text {
+    font-size  : calc(var(--text-md) * 0.8);
+    color: var(--color-text-dark);
+}
+.events-list__meta {
+	list-style: none;
+	font-family  : var(--font-1);
+	font-size  : calc(var(--text-md) * 0.7);
+	font-weight: 600;
+	line-height: 1.7;
+	color: #000000;
+	margin-top: var(--vspace-1);
+	border-top: 1px solid var(--color-border);
+  }
+  
+  .events-list__meta li {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-right: 2rem;
+	padding-left: 4.8rem;
+	border-bottom: 1px solid #e0e0e0;
+	position: relative;
+  }
+  
+  .events-list__meta li::before {
+	display: block;
+	height: 2.1rem;
+	width: 2.1rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	position: absolute;
+	top: 1.8rem;
+	left: .8rem;
+  }
+  
