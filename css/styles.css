@@ -4043,7 +4043,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-clients {
 	padding-top     : var(--vspace-6);
-	padding-bottom  : var(--vspace-4);
+	padding-bottom  : var(--vspace-1);
 	background-color: var(--color-3);
 }
 
@@ -4818,4 +4818,3 @@ td:last-child {
 	top: 1.8rem;
 	left: .8rem;
   }
-  
