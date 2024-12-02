@@ -3038,6 +3038,12 @@ td:last-child {
 }
 
 
+.s-activities {
+	padding-top     : var(--vspace-4);
+	padding-bottom  : var(--vspace-3);
+}
+
+
 
 /* ===================================================================
  * # GRID-BASED LAYOUTS
@@ -4016,8 +4022,8 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-expertise {
-	padding-top   : var(--vspace-6);
-	padding-bottom: var(--vspace-5);
+	padding-top   : var(--vspace-4);
+	padding-bottom: var(--vspace-3);
 }
 
 .s-expertise__content-main {
@@ -4042,8 +4048,8 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-	padding-top     : var(--vspace-6);
-	padding-bottom  : var(--vspace-1);
+	padding-top     : var(--vspace-4);
+	padding-bottom  : var(--vspace-3);
 	background-color: var(--color-3);
 }
 
