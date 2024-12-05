@@ -395,6 +395,40 @@
 
     }; // end ssMoveTo
 
+    /* slider auto
+    * ------------------------------------------------------ */
+    const ssSliderAuto = function() {
+
+        const sliders = document.querySelectorAll('.home-slider, .page-slider, .single-slider');
+
+        sliders.forEach(function(slider) {
+
+            let sliderInterval = setInterval(function() {
+                if (slider.swiper.isEnd) {
+                    slider.swiper.slideTo(0);
+                } else {
+                    slider.swiper.slideNext();
+                }
+            }, 7000);
+
+            slider.addEventListener('mouseenter', function() {
+                clearInterval(sliderInterval);
+            });
+
+            slider.addEventListener('mouseleave', function() {
+                sliderInterval = setInterval(function() {
+                    if (slider.swiper.isEnd) {
+                        slider.swiper.slideTo(0);
+                    } else {
+                        slider.swiper.slideNext();
+                    }
+                }, 7000);
+            });
+
+        });
+
+    }; // end ssSliderAuto
+
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -406,6 +440,7 @@
         ssMailChimpForm();
         ssAlertBoxes();
         ssMoveTo();
+        ssSliderAuto();
 
     })();
 
