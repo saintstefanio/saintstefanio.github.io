@@ -65,10 +65,13 @@
                 <nav class="s-header__nav">
     
                     <ul class="s-header__menu-links">
+                        <li><a href="contact.html" onclick="changeLanguage('en')">English</a></li>
+                        <li><a href="contact.html" onclick="changeLanguage('lv')">Latviski</a></li>
+                        <li><a href="contact.html" onclick="changeLanguage('ru')">Русский</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
-                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn" data-i18n="index_contact_button"></a>                        
                     </div> <!-- s-header__contact -->
     
                 </nav> <!-- end s-header__nav -->
@@ -84,9 +87,8 @@
                <section class="s-pageheader pageheader">
                     <div class="row">
                         <div class="column xl-12">
-                            <h1 class="page-title">
-                                <span class="page-title__small-type text-pretitle">Contact</span>
-                                Get In Touch
+                            <h1 class="page-title" data-i18n="contact_header_title">
+                                <span class="page-title__small-type text-pretitle" data-i18n="contact_header_pretitle"></span>
                             </h1>                            
                         </div>
                     </div>
@@ -96,44 +98,42 @@
 
                     <div class="row pageintro">
                         <div class="column xl-6 lg-12">
-                            <h2 class="text-display-title">Let's take your business to the next level.</h2>
+                            <h2 class="text-display-title" data-i18n="contact_title"></h2>
                         </div>
                         <div class="column xl-6 lg-12 u-flexitem-x-right">
-                            <p class="lead">
-                                Ready to take the next step? Contact me today, and let's align on how AI can help you achieve your goals.
-                            </p>
+                            <p class="lead" data-i18n="contact_lead"></p>
                         </div>
                     </div> <!-- pageintro -->
                     
                     <div class="row contactform">
                         <div class="column xl-12">
-                            <h3 class="u-add-bottom">Contact Form</h3>
+                            <h3 class="u-add-bottom" data-i18n="contact_form"></h3>
                             <form>
                                 <div>
-                                    <label for="sampleInput">Your email</label>
-                                    <input class="u-fullwidth" type="email" placeholder="name.lastname@mail.com" id="sampleInput">
+                                    <label for="sampleInput" data-i18n="contact_email"></label>
+                                    <input class="u-fullwidth" type="email" data-i18n="contact_email_placeholder" id="sampleInput">
                                 </div>
                                 <div>
-                                    <label for="sampleReason">Reason for contacting</label>
+                                    <label for="sampleReason" data-i18n="contact_reason"></label>
                                     <div class="ss-custom-select">
                                         <select class="u-fullwidth" id="sampleReason">
-                                            <option value="Option 1">Lecture</option>
-                                            <option value="Option 2">Seminar</option>
-                                            <option value="Option 3">Consultation</option>
-                                            <option value="Option 4">Other</option>
+                                            <option value="Option 1" data-i18n="contact_reason_1"></option>
+                                            <option value="Option 2" data-i18n="contact_reason_2"></option>
+                                            <option value="Option 3" data-i18n="contact_reason_3"></option>
+                                            <option value="Option 4" data-i18n="contact_reason_4"></option>
                                         </select>
                                     </div>
                                 </div>
                                 
-                                <label for="sampleMessage">Message</label>
-                                <textarea class="u-fullwidth" placeholder="Your message" id="sampleMessage"></textarea>
+                                <label for="sampleMessage" data-i18n="contact_message"></label>
+                                <textarea class="u-fullwidth" data-i18n="contact_message_placeholder" id="sampleMessage"></textarea>
             
                                 <label class="u-add-bottom">
                                     <input type="checkbox">
-                                    <span class="label-text">Send a copy to yourself</span>
+                                    <span class="label-text" data-i18n="contact_checkbox"></span>
                                 </label>
                             
-                                <input class="btn--primary u-fullwidth" type="submit" value="Submit">
+                                <input class="btn--primary u-fullwidth" type="submit" data-i18n="contact_button">
                             </form>
                         </div>
                     </div> <!-- contactform -->
@@ -145,80 +145,69 @@
                     <div class="s-testimonials__header row row-x-center text-center">
                         <div class="column xl-8 lg-12">
         
-                            <p class="text-pretitle">
-                            Testimonials
-                            </p>
-                            <h3>
-                            Reviews From Real Clients
-                            </h3>                        
+                            <p class="text-pretitle" data-i18n="contact_testimonials_pretitle"></p>
+                            <h3 data-i18n="contact_testimonials_title"></h3>                        
         
                         </div>
                     </div> <!--end s-testimonials__header -->
 
-                    <div class="row s-testimonials__content">
+                    <div class="row s-clients__content-block">
                         <div class="column xl-12 testimonials">
-
-                            <div class="swiper-container testimonials__slider page-slider">
-
+                        
+                            <div class="swiper-container testimonials__slider single-slider">
+    
                                 <div class="swiper-wrapper">
                                     <div class="testimonials__slide swiper-slide">
-                                        <p>
-                                        Good
-                                        </p>
+                                        <p data-i18n="index_testimonials_1_text"></p>
                                         <div class="testimonials__author">
-                                            <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                                            <img src="images/avatars/rodion.jpg" alt="Rodion Shiryayev" class="testimonials__avatar">
                                             <cite class="testimonials__cite">
-                                                <strong>John Rockefeller</strong>
-                                                <span>Standard Oil Co.</span>
+                                                <strong data-i18n="index_testimonials_1_name"></strong>
+                                                <span data-i18n="index_testimonials_1_position"></span>
                                             </cite>
                                         </div>
                                     </div>
                                     <div class="testimonials__slide swiper-slide">
-                                        <p>
-                                        Good
-                                        </p>
+                                        <p data-i18n="index_testimonials_2_text"></p>
                                         <div class="testimonials__author">
                                             <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
                                             <cite class="testimonials__cite">
-                                                <strong>Andrew Carnegie</strong>
-                                                <span>Carnegie Steel Co.</span>
+                                                <strong data-i18n="index_testimonials_2_name"></strong>
+                                                <span data-i18n="index_testimonials_2_position"></span>
                                             </cite>
                                         </div>
                                     </div>
                                     <div class="testimonials__slide swiper-slide">
-                                        <p>
-                                        Good
-                                        </p>
+                                        <p data-i18n="index_testimonials_3_text"></p>
                                         <div class="testimonials__author">
                                             <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
                                             <cite class="testimonials__cite">
-                                                <strong>Henry Ford</strong>
-                                                <span>Ford Motor Co.</span>
+                                                <strong data-i18n="index_testimonials_3_name"></strong>
+                                                <span data-i18n="index_testimonials_3_position"></span>
                                             </cite>
                                         </div>
                                     </div>
                                     <div class="testimonials__slide swiper-slide">
-                                        <p>
-                                        Good
-                                        </p>
+                                        <p data-i18n="index_testimonials_4_text"></p>
                                         <div class="testimonials__author">
                                             <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
                                             <cite class="testimonials__cite">
-                                                <strong>John Morgan</strong>
-                                                <span>JP Morgan & Co.</span>
+                                                <strong data-i18n="index_testimonials_4_name"></strong>
+                                                <span data-i18n="index_testimonials_4_position"></span>
                                             </cite>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div> <!-- end swiper-wrapper --> 
-
+    
                                 <div class="swiper-pagination"></div>
+    
+                            </div> <!--end testimonials__slider -->                    
+                        
+                        </div> <!-- end column -->
+                    </div> <!-- end row -->
+                </div> <!--end s-testimonials__content -->
 
-                            </div> <!--end testimonials__slider --> 
-
-                        </div> <!-- testimonials -->
-                    </div> <!--end s-testimonials__content -->
-
-               </section> <!-- end s-testimonials -->
+            </section> <!-- end s-testimonials -->
 
         </section> <!-- s-content-->
 

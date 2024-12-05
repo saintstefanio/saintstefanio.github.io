@@ -65,11 +65,14 @@
 
                 <nav class="s-header__nav">
     
-                    <ul class="s-header__menu-links">
+                    <ul id="language-selector" class="s-header__menu-links">
+                        <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
+                        <li><a href="index.html" onclick="changeLanguage('lv')">Latviski</a></li>
+                        <li><a href="index.html" onclick="changeLanguage('ru')">Русский</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
-                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn" data-i18n="index_contact_button"></a>                        
                     </div> <!-- s-header__contact -->
 
                 </nav> <!-- end s-header__nav -->
@@ -92,11 +95,8 @@
                     <div class="column lg-12 s-intro__content-inner grid-block">
                         
                         <div class="s-intro__content-text">
-                            <div class="s-intro__content-pretitle text-pretitle">Hello, I'm Stefan</div>
-                            <h1 class="s-intro__content-title">
-                            I propose AI solutions <br>
-                            that drive results.
-                            </h1>
+                            <div class="s-intro__content-pretitle text-pretitle" data-i18n="index_intro_pretitle"></div>
+                            <h1 class="s-intro__content-title" data-i18n="index_intro_title"></h1>
                         </div> <!-- s-intro__content-text -->
 
                         <div class="s-intro__scroll-down">
@@ -104,7 +104,7 @@
                                 <div class="scroll-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#97b34a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!  Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<polyline points="7 13 12 18 17 13"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
                                 </div>
-                                <span>Scroll for more</span>
+                                <span data-i18n="index_scroll_icon"></span>
                             </a>
                         </div> <!-- s-intro__scroll-down -->
                         
@@ -124,32 +124,18 @@
                         <img src="images/geometric_shape.svg" alt="" class="s-about__content-imgbg">
 
                         <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">About</div>                           
-                            <h1 class="text-display-title">
-                            Unlocking Business Potential with AI Expertise.
-                            </h1>
+                            <div class="text-pretitle" data-i18n="index_about_pretitle"></div>                           
+                            <h1 class="text-display-title" data-i18n="index_text_display_title"></h1>
                             
                             <div class="s-about__content-btn grid-section-split__bottom">
-                                <a href="https://www.linkedin.com/in/stdayneko/" class="btn btn--stroke u-fullwidth">My LinkedIn Profile</a>
+                                <a href="https://www.linkedin.com/in/stdayneko/" class="btn btn--stroke u-fullwidth" data-i18n="index_linkedin_button"></a>
                             </div> <!-- end s-about__content-btn -->
                         </div> <!-- end section-header -->
 
                         <div class="s-about__content-main grid-section-split__primary">
-                            <p class="attention-getter">
-                                I'm Stefan Dayneko, an AI and Data Science professional dedicated to 
-                                sharing knowledge through lectures, seminars, and consulting. 
-                                With a deep understanding of the latest trends in AI, I provide businesses 
-                                and professionals with practical, actionable insights that drive real, 
-                                measurable results.
-                            </p>
+                            <p class="attention-getter" data-i18n="index_about_content_1"></p>
 
-                            <p class="attention-getter">
-                                My goal is to empower individuals and organizations 
-                                to navigate the complexities of Data Science and AI, equipping them with 
-                                the skills and strategies needed to thrive in an increasingly tech-driven world. 
-                                Whether you're looking for tailored training for your team or one-on-one guidance, 
-                                I help bridge the gap between cutting-edge technology and its practical applications.
-                            </p>
+                            <p class="attention-getter" data-i18n="index_about_contant_2"></p>
 
                         </div> <!-- end s-about__content-main -->
 
@@ -166,21 +152,13 @@
                     <div class="column xl-12 grid-block grid-section-split">
 
                         <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">Expertise</div>                           
-                            <h2 class="text-display-title">
-                            Key areas of expertise.
-                            </h2>     
+                            <div class="text-pretitle" data-i18n="index_expertise_pretitle"></div>                           
+                            <h2 class="text-display-title" data-i18n="index_expertise_title"></h2>     
                             
-                            <p class="lead">
-                                In today's fast-paced AI landscape, making informed 
-                                decisions is more important than ever. I provide clear, actionable 
-                                insights through expert guidance and tailored strategies. By sharing 
-                                practical applications and the latest advancements in AI, I empower 
-                                businesses and professionals to navigate complex topics with clarity and confidence.
-                            </p>
+                            <p class="lead" data-i18n="index_expertise_lead"></p>
 
                             <div class="s-about__content-btn grid-section-split__bottom">
-                                <a href="expertise.html" class="btn u-fullwidth">Discover Outcomes</a>
+                                <a href="expertise.html" class="btn u-fullwidth" data-i18n="index_expertise_button"></a>
                             </div> <!-- end s-about__content-btn -->
                         </div> <!-- end section-header -->
 
@@ -189,51 +167,34 @@
                             <div class="grid-list-items list-items show-ctr">
                                 <div class="grid-list-items__item list-items__item">
                                     <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">AI Innovation</h3>
+                                        <h3 class="list-items__item-title" data-i18n="index_expertise_1_header"></h3>
                                     </div>
                                     <div class="grid-list-items__text list-items__item-text">
-                                        <p>
-                                            Discover how cutting-edge advancements in AI can solve 
-                                            real-world challenges. I equip clients with the knowledge 
-                                            to identify and evaluate AI opportunities that drive innovation and growth.
-                                        </p>
+                                        <p data-i18n="index_expertise_1_text"></p>
                                     </div>
                                 </div> <!-- list-item -->
                                 <div class="grid-list-items__item list-items__item">
                                     <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Expert Training</h3>
+                                        <h3 class="list-items__item-title" data-i18n="index_expertise_2_header"></h3>
                                     </div>
                                     <div class="grid-list-items__text list-items__item-text">
-                                        <p>
-                                            Gain a deeper understanding of AI through tailored lectures, 
-                                            seminars, and workshops. My teaching demystifies complex concepts, 
-                                            making them accessible and actionable for participants at all levels.
-                                        </p>
+                                        <p data-i18n="index_expertise_2_text"></p>
                                     </div>
                                 </div> <!-- list-expertise__item -->
                                 <div class="grid-list-items__item list-items__item">
                                     <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Technical Leadership</h3>
+                                        <h3 class="list-items__item-title" data-i18n="index_expertise_3_header"></h3>
                                     </div>
                                     <div class="grid-list-items__text list-items__item-text">
-                                        <p>
-                                            Navigate AI-related decisions with confidence. I provide guidance 
-                                            to teams and organizations, clarifying possibilities and ensuring 
-                                            strategies align with business objectives.
-                                        </p>
+                                        <p data-i18n="index_expertise_3_text"></p>
                                     </div>
                                 </div> <!-- list-expertise__item -->
                                 <div class="grid-list-items__item list-items__item">
                                     <div class="grid-list-items__title list-items__item-header">
-                                        <h3 class="list-items__item-title">Strategic Consultation</h3>
+                                        <h3 class="list-items__item-title" data-i18n="index_expertise_4_header"></h3>
                                     </div>
                                     <div class="grid-list-items__text list-items__item-text">
-                                        <p>
-                                            Approach AI adoption and integration with a clear plan. 
-                                            I offer expert advice on feasibility, alignment, and practical 
-                                            impact, helping businesses achieve sustainable results without 
-                                            direct implementation.
-                                        </p>
+                                        <p data-i18n="index_expertise_4_text"></p>
                                     </div>
                                 </div> <!-- list-expertise__item -->
 
@@ -253,10 +214,8 @@
                     <div class="column xl-12 grid-block grid-section-split">
                     
                         <div class="section-header grid-section-split__header">
-                            <div class="text-pretitle">Clients</div>                           
-                            <h2 class="text-display-title">
-                            Organizations I collaborate with.
-                            </h2>       
+                            <div class="text-pretitle" data-i18n="index_clients_pretitle"></div>                           
+                            <h2 class="text-display-title" data-i18n="index_clients_title"></h2>       
                         </div> <!-- end section-header -->
                     
                     </div> <!-- end column -->
@@ -298,54 +257,42 @@
 
                             <div class="swiper-wrapper">
                                 <div class="testimonials__slide swiper-slide">
-                                    <p>
-                                        Stefan created an inspiring and educational environment that captivated the audience. 
-                                        The complex concepts of AI were presented in a way that was both understandable and 
-                                        practically applicable. This approach left a positive impact on our team, encouraging them to further explore the field.
-                                        We truly appreciate Stefan's efforts in making the lecture a success.
-                                        Thank you!
-                                    </p>
+                                    <p data-i18n="index_testimonials_1_text"></p>
                                     <div class="testimonials__author">
                                         <img src="images/avatars/rodion.jpg" alt="Rodion Shiryayev" class="testimonials__avatar">
                                         <cite class="testimonials__cite">
-                                            <strong>Rodion Shiryayev</strong>
-                                            <span>MSC Service Center Riga Managing Director</span>
+                                            <strong data-i18n="index_testimonials_1_name"></strong>
+                                            <span data-i18n="index_testimonials_1_position"></span>
                                         </cite>
                                     </div>
                                 </div>
                                 <div class="testimonials__slide swiper-slide">
-                                    <p>
-                                    Good good good!
-                                    </p>
+                                    <p data-i18n="index_testimonials_2_text"></p>
                                     <div class="testimonials__author">
                                         <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
                                         <cite class="testimonials__cite">
-                                            <strong>Evalds Urtans</strong>
-                                            <span>ASYA</span>
+                                            <strong data-i18n="index_testimonials_2_name"></strong>
+                                            <span data-i18n="index_testimonials_2_position"></span>
                                         </cite>
                                     </div>
                                 </div>
                                 <div class="testimonials__slide swiper-slide">
-                                    <p>
-                                    Good good good!
-                                    </p>
+                                    <p data-i18n="index_testimonials_3_text"></p>
                                     <div class="testimonials__author">
                                         <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
                                         <cite class="testimonials__cite">
-                                            <strong>Henry Ford</strong>
-                                            <span>Daugavpils University</span>
+                                            <strong data-i18n="index_testimonials_3_name"></strong>
+                                            <span data-i18n="index_testimonials_3_position"></span>
                                         </cite>
                                     </div>
                                 </div>
                                 <div class="testimonials__slide swiper-slide">
-                                    <p>
-                                    Good good good!
-                                    </p>
+                                    <p data-i18n="index_testimonials_4_text"></p>
                                     <div class="testimonials__author">
                                         <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
                                         <cite class="testimonials__cite">
-                                            <strong>John Doe</strong>
-                                            <span>Riga Technical University</span>
+                                            <strong data-i18n="index_testimonials_4_name"></strong>
+                                            <span data-i18n="index_testimonials_4_position"></span>
                                         </cite>
                                     </div>
                                 </div>
@@ -368,12 +315,8 @@
                 <div class="s-testimonials__header row row-x-center text-center">
                     <div class="column xl-8 lg-12">
     
-                        <p class="text-pretitle">
-                        Highlights
-                        </p>
-                        <h3>
-                        Recent Activities
-                        </h3>                        
+                        <p class="text-pretitle" data-i18n="index_highlights_pretitle"></p>
+                        <h3 data-i18n="index_highlights_title"></h3>                        
     
                     </div>
                 </div> <!--end s-testimonials__header -->
@@ -390,9 +333,7 @@
                                         srcset="images/intro-bg.jpg 1000w, 
                                         images/intro-bg.jpg 500w" 
                                         sizes="(max-width: 1000px) 100vw, 1000px" alt="">
-                                        <figcaption>
-                                            Speaker at Crayon Connect AI Forum - "Data Drives Growth".
-                                        </figcaption>
+                                        <figcaption data-i18n="index_highlights_1_caption"></figcaption>
                                     </figure>
                                 </div>
                                 <div class="testimonials__slide swiper-slide">
@@ -401,9 +342,7 @@
                                         srcset="images/activities/lr4.jpg 1000w, 
                                         images/activities/lr4.jpg 500w" 
                                         sizes="(max-width: 1000px) 100vw, 1000px" alt="">
-                                        <figcaption>
-                                            Speaker at Latvian Radio 4 Open Talk - "The National Artificial Intelligence Center - Who Will It Help?".
-                                        </figcaption>
+                                        <figcaption data-i18n="index_highlights_2_caption"></figcaption>
                                     </figure>
                                 </div>
                                 <div class="testimonials__slide swiper-slide">
@@ -412,9 +351,7 @@
                                         srcset="images/activities/ai_course.jpg 1000w, 
                                         images/activities/ai_course.jpg 500w" 
                                         sizes="(max-width: 1000px) 100vw, 1000px" alt="">
-                                        <figcaption>
-                                            Speaker at AI Course - "AI solutions for boosting business productivity".
-                                        </figcaption>
+                                        <figcaption data-i18n="index_highlights_3_caption"></figcaption>
                                     </figure>
                                 </div>
                             </div> <!-- end swiper-wrapper --> 
@@ -437,15 +374,9 @@
                 <div class="column xl-8 lg-12">
 
                     <div class="s-cta__content">
-                        <h2 class="text-display-title">
-                        Get in touch.
-                        </h2>
-                        <p class="lead">
-                            Have an idea or a concept that really excite you? 
-                            Let's turn that idea into reality. 
-                            Shoot me a message.
-                        </p>
-                        <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+                        <h2 class="text-display-title" data-i18n="index_cta_title"></h2>
+                        <p class="lead" data-i18n="index_cta_lead"></p>
+                        <a href="contact.html" class="btn btn--primary" data-i18n="index_contact_button"></a>
                     </div>
 
                 </div>

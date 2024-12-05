@@ -65,10 +65,13 @@
 
                 <nav class="s-header__nav">    
                     <ul class="s-header__menu-links">
+                        <li><a href="expertise.html" onclick="changeLanguage('en')">English</a></li>
+                        <li><a href="expertise.html" onclick="changeLanguage('lv')">Latviski</a></li>
+                        <li><a href="expertise.html" onclick="changeLanguage('ru')">Русский</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <div class="s-header__contact">
-                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn" data-i18n="index_contact_button"></a>
                         
                     </div> <!-- s-header__contact -->    
                 </nav> <!-- end s-header__nav -->
@@ -86,9 +89,7 @@
                 <div class="row">
                     <div class="column xl-12">
 
-                        <h1 class="entry__title">
-                            Unlock AI's Potential with Expert Guidance
-                        </h1> <!-- end entry__title -->
+                        <h1 class="entry__title" data-i18n="expertise_title"></h1> <!-- end entry__title -->
 
                     </div>
                 </div>
@@ -98,13 +99,7 @@
 
                 <div class="row entry__primary width-narrower">
                     <div class="column xl-12"> 
-                        <p class="lead">
-                            AI is transforming industries, and understanding its role in your 
-                            business is vital. My services focus on simplifying complex concepts 
-                            and providing practical knowledge that helps you embrace AI with 
-                            confidence. Whether you're exploring new possibilities or refining 
-                            your strategy, I'm here to guide you toward meaningful results.
-                        </p>
+                        <p class="lead" data-i18n="expertise_lead"></p>
                         <hr>
                     </div> <!-- end column -->
                 </div> <!-- introduction -->
@@ -112,116 +107,74 @@
                 <div class="row s-expertise__content width-narrow">
                     <div class="row events-list">
                         <div class="column events-list__item xl-6 tab-12">
-                            <h3 class="events-list__item-title">AI Innovation</h3>
-                            <p class="events-list__description">
-                                Advancements in AI hold immense potential to address industry 
-                                challenges and foster growth. I help businesses explore emerging 
-                                technologies, assess their applications, and identify impactful 
-                                opportunities for innovation.
-                            </p>
+                            <h3 class="events-list__item-title" data-i18n="index_expertise_1_header"></h3>
+                            <p class="events-list__description" data-i18n="expertise_1_description"></p>
                             <ul class="events-list__meta">
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Clarity on AI capabilities for your industry.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_1_text_1"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Insights to evaluate the feasibility and ROI of AI projects.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_1_text_2"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Tools to guide strategic decisions around AI investments.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_1_text_3"></span>
                                 </li>
                             </ul>
                         </div>
                         <div class="column events-list__item xl-6 tab-12">
-                            <h3 class="events-list__item-title">Expert Training</h3>
-                            <p class="events-list__description">
-                                I design and deliver tailored lectures, seminars, and workshops 
-                                that simplify AI concepts for professionals and teams. My sessions 
-                                make complex ideas accessible and actionable, equipping participants 
-                                with skills for real-world applications.
-                            </p>
+                            <h3 class="events-list__item-title" data-i18n="index_expertise_2_header"></h3>
+                            <p class="events-list__description" data-i18n="expertise_2_description"></p>
                             <ul class="events-list__meta">
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Teams confident in applying AI to their roles.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_2_text_1"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        A clear understanding of AI's role in organizational success.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_2_text_2"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Improved collaboration through shared learning experiences.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_2_text_3"></span>
                                 </li>
                             </ul>
                         </div>
                         <div class="column events-list__item xl-6 tab-12">
-                            <h3 class="events-list__item-title">Technical Leadership</h3>
-                            <p class="events-list__description">
-                                Navigating AI strategies requires informed decision-making. 
-                                I guide organizations in understanding the potential and limitations 
-                                of AI, ensuring that their goals align with the technology's capabilities.
-                            </p>
+                            <h3 class="events-list__item-title" data-i18n="index_expertise_3_header"></h3>
+                            <p class="events-list__description" data-i18n="expertise_3_description"></p>
                             <ul class="events-list__meta">
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Confident leadership ready to embrace AI.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_3_text_1"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        AI strategies aligned with core business goals.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_3_text_2"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Teams empowered to make data-driven decisions.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_3_text_3"></span>
                                 </li>
                             </ul>
                         </div>
                         <div class="column events-list__item xl-6 tab-12">
-                            <h3 class="events-list__item-title">Strategic Consultation</h3>
-                            <p class="events-list__description">
-                                AI adoption starts with asking the right questions. I help businesses 
-                                assess opportunities, plan approaches, and understand how AI aligns with 
-                                their vision—all without technical implementation.
-                            </p>
+                            <h3 class="events-list__item-title" data-i18n="index_expertise_4_header"></h3>
+                            <p class="events-list__description" data-i18n="expertise_4_description"></p>
                             <ul class="events-list__meta">
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        A practical plan for exploring AI adoption.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_4_text_1"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Tailored advice to meet organizational goals.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_4_text_2"></span>
                                 </li>
                                 <li class="events-list__meta-item">
                                     <span class="events-list__meta-item-icon">☑</span>
-                                    <span class="events-list__meta-item-text">
-                                        Confidence in pursuing AI initiatives strategically.
-                                    </span>
+                                    <span class="events-list__meta-item-text" data-i18n="expertise_4_text_3"></span>
                                 </li>
                             </ul>
                         </div>
@@ -241,15 +194,9 @@
                 <div class="column xl-8 lg-12">
 
                     <div class="s-cta__content">
-                        <h2 class="text-display-title">
-                        Get in touch.
-                        </h2>
-                        <p class="lead">
-                            Have an idea or a concept that really excite you? 
-                            Let's turn that idea into reality. 
-                            Shoot me a message.
-                        </p>
-                        <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+                        <h2 class="text-display-title" data-i18n="index_cta_title"></h2>
+                        <p class="lead" data-i18n="index_cta_lead"></p>
+                        <a href="contact.html" class="btn btn--primary" data-i18n="index_contact_button"></a>
                     </div>
 
                 </div>

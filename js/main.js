@@ -403,19 +403,9 @@
 
         sliders.forEach(function(slider) {
 
-            let sliderInterval = setInterval(function() {
-                if (slider.swiper.isEnd) {
-                    slider.swiper.slideTo(0);
-                } else {
-                    slider.swiper.slideNext();
-                }
-            }, 7000);
+            let sliderInterval;
 
-            slider.addEventListener('mouseenter', function() {
-                clearInterval(sliderInterval);
-            });
-
-            slider.addEventListener('mouseleave', function() {
+            const startSlider = function() {
                 sliderInterval = setInterval(function() {
                     if (slider.swiper.isEnd) {
                         slider.swiper.slideTo(0);
@@ -423,11 +413,88 @@
                         slider.swiper.slideNext();
                     }
                 }, 7000);
-            });
+            };
+
+            const stopSlider = function() {
+                clearInterval(sliderInterval);
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        startSlider();
+                    } else {
+                        stopSlider();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(slider);
+
+            slider.addEventListener('mouseenter', stopSlider);
+            slider.addEventListener('mouseleave', startSlider);
 
         });
 
     }; // end ssSliderAuto
+
+    /* language switch
+    * ------------------------------------------------------ */
+    const ssLanguageSwitch = function() {
+
+        async function fetchLanguageData(lang) {
+            const response = await fetch(`languages/${lang}.json`);
+            return response.json();
+        }
+    
+        function setLanguagePreference(lang) {
+            localStorage.setItem("language", lang);
+            location.reload();
+        }
+    
+        function updateContent(langData) {
+            document.querySelectorAll("[data-i18n]").forEach((element) => {
+                const key = element.getAttribute("data-i18n");
+    
+                if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+                    if (key === "contact_email_placeholder" || key === "contact_message_placeholder") {
+                        element.placeholder = langData[key];
+                    } else if (key === "contact_button") {
+                        element.value = langData[key];
+                    }
+                } else {
+                    if (langData[key]) {
+                        element.innerHTML = langData[key];
+                    }
+                }
+            });
+        }
+    
+        async function changeLanguage(lang) {
+            setLanguagePreference(lang);
+            const langData = await fetchLanguageData(lang);
+            updateContent(langData);
+        }
+    
+        window.addEventListener("DOMContentLoaded", async () => {
+            const userPreferredLanguage = localStorage.getItem("language") || "en";
+            const langData = await fetchLanguageData(userPreferredLanguage);
+            updateContent(langData);
+    
+            // Add event listener to the language selector dropdown
+            const languageSelector = document.getElementById("language-selector");
+            if (languageSelector) {
+                languageSelector.value = userPreferredLanguage; // Set the dropdown to the preferred language
+                languageSelector.addEventListener("change", (event) => {
+                    changeLanguage(event.target.value);
+                });
+            }
+        });
+
+        // Attach changeLanguage to the window object
+        window.changeLanguage = changeLanguage;
+    
+    }; // end ssLanguage
 
 
    /* Initialize
@@ -441,6 +508,7 @@
         ssAlertBoxes();
         ssMoveTo();
         ssSliderAuto();
+        ssLanguageSwitch();
 
     })();
 
