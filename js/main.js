@@ -142,6 +142,32 @@
             }
         });
 
+        const singleSliderSwiper = new Swiper('.single-slider', {
+
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is > 400px
+                401: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                // when window width is > 800px
+                801: {
+                    slidesPerView: 1,
+                    spaceBetween: 40
+                },
+                // when window width is > 1240px
+                1241: {
+                    slidesPerView: 1,
+                    spaceBetween: 48
+                }
+            }
+        });
+
     }; // end ssSwiper
 
 

@@ -2937,6 +2937,7 @@ td:last-child {
 
 .testimonials__slider {
 	padding-bottom: var(--vspace-2_5);
+	text-align: center;
 }
 
 .testimonials__author {
@@ -4049,7 +4050,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-clients {
 	padding-top     : var(--vspace-4);
-	padding-bottom  : var(--vspace-3);
+	padding-bottom  : var(--vspace-1);
 	background-color: var(--color-3);
 }
 
@@ -4760,14 +4761,15 @@ td:last-child {
     padding: var(--vspace-2);
     color: var(--color-text);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: justify;
 }
 
 .events-list__item-title {
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     font-size  : clamp(4rem, 1vw, var(--text-display-3));
-    font-weight: 600;
     color: var(--color-1-light);
     margin-bottom: var(--vspace-1_25);
+	text-align: center;
 }
 
 .events-list__description {
@@ -4793,6 +4795,7 @@ td:last-child {
     font-size  : calc(var(--text-md) * 0.8);
     color: var(--color-text-dark);
 }
+
 .events-list__meta {
 	list-style: none;
 	font-family  : var(--font-1);
