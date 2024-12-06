@@ -2472,9 +2472,13 @@ td:last-child {
 	font-weight  : 500;
 	font-size    : var(--text-sm);
 	line-height  : var(--vspace-0_75);
-	opacity      : 1;
+	display      : none;
 	visibility   : visible;
 	position     : relative;
+}
+
+.alert-box.visible {
+    display: block;
 }
 
 .alert-box__close {

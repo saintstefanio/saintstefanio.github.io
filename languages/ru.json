@@ -77,6 +77,8 @@
     "contact_message_placeholder": "Ваше сообщение здесь",
     "contact_checkbox": "Отправить копию себе",
     "contact_button": "Отправить",
+    "contact_status_success": "Ваше сообщение успешно отправлено.",
+    "contact_status_error": "При отправке вашего сообщения произошла ошибка. Пожалуйста, попробуйте еще раз.",
     "contact_testimonials_pretitle": "Отзывы",
     "contact_testimonials_title": "Отзывы От Реальных Клиентов"
 }

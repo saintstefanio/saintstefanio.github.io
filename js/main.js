@@ -171,140 +171,40 @@
     }; // end ssSwiper
 
 
-   /* mailchimp form
-    * ---------------------------------------------------- */ 
-    const ssMailChimpForm = function() {
+    /* EmailJS Form Submission
+    * ---------------------------------------------------- */
+    const ssEmailJS = async (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior.
 
-        const mcForm = document.querySelector('#mc-form');
+        // Collect form data
+        const form = document.getElementById('contact-form');
+        const formData = new FormData(form);
 
-        if (!mcForm) return;
+        // Check if the "send copy" checkbox is checked
+        const sendCopyCheckbox = document.getElementById('checkbox');
+        
+        // Convert formData to a plain object
+        const data = Object.fromEntries(formData.entries());
 
-        // Add novalidate attribute
-        mcForm.setAttribute('novalidate', true);
+        // Fetch the current language
+        const language = localStorage.getItem("language") || "en";
+        data.language = language; // Add language to the data object
 
-        // Field validation
-        function hasError(field) {
-
-            // Don't validate submits, buttons, file and reset inputs, and disabled fields
-            if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
-
-            // Get validity
-            let validity = field.validity;
-
-            // If valid, return null
-            if (validity.valid) return;
-
-            // If field is required and empty
-            if (validity.valueMissing) return 'Please enter an email address.';
-
-            // If not the right type
-            if (validity.typeMismatch) {
-                if (field.type === 'email') return 'Please enter a valid email address.';
+        try {
+            // Send email using EmailJS
+            const response = await emailjs.send('service_portf_gmail', 'template_i4t7cji', data);
+            if (sendCopyCheckbox.checked) {
+                const response = await emailjs.send('service_portf_gmail', 'template_e014qde', data);
+                console.log('Copy sent successfully:', response);
             }
-
-            // If pattern doesn't match
-            if (validity.patternMismatch) {
-
-                // If pattern info is included, return custom error
-                if (field.hasAttribute('title')) return field.getAttribute('title');
-
-                // Otherwise, generic error
-                return 'Please match the requested format.';
-            }
-
-            // If all else fails, return a generic catchall error
-            return 'The value you entered for this field is invalid.';
-
-        };
-
-        // Show error message
-        function showError(field, error) {
-
-            // Get field id or name
-            let id = field.id || field.name;
-            if (!id) return;
-
-            let errorMessage = field.form.querySelector('.mc-status');
-
-            // Update error message
-            errorMessage.classList.remove('success-message');
-            errorMessage.classList.add('error-message');
-            errorMessage.innerHTML = error;
-
-        };
-
-        // Display form status (callback function for JSONP)
-        window.displayMailChimpStatus = function (data) {
-
-            // Make sure the data is in the right format and that there's a status container
-            if (!data.result || !data.msg || !mcStatus ) return;
-
-            // Update our status message
-            mcStatus.innerHTML = data.msg;
-
-            // If error, add error class
-            if (data.result === 'error') {
-                mcStatus.classList.remove('success-message');
-                mcStatus.classList.add('error-message');
-                return;
-            }
-
-            // Otherwise, add success class
-            mcStatus.classList.remove('error-message');
-            mcStatus.classList.add('success-message');
-        };
-
-        // Submit the form 
-        function submitMailChimpForm(form) {
-
-            let url = cfg.mailChimpURL;
-            let emailField = form.querySelector('#mce-EMAIL');
-            let serialize = '&' + encodeURIComponent(emailField.name) + '=' + encodeURIComponent(emailField.value);
-
-            if (url == '') return;
-
-            url = url.replace('/post?u=', '/post-json?u=');
-            url += serialize + '&c=displayMailChimpStatus';
-
-            // Create script with url and callback (if specified)
-            var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
-            var script = window.document.createElement( 'script' );
-            script.src = url;
-
-            // Create global variable for the status container
-            window.mcStatus = form.querySelector('.mc-status');
-            window.mcStatus.classList.remove('error-message', 'success-message')
-            window.mcStatus.innerText = 'Submitting...';
-
-            // Insert script tag into the DOM
-            ref.parentNode.insertBefore( script, ref );
-
-            // After the script is loaded (and executed), remove it
-            script.onload = function () {
-                this.remove();
-            };
-
-        };
-
-        // Check email field on submit
-        mcForm.addEventListener('submit', function (event) {
-
-            event.preventDefault();
-
-            let emailField = event.target.querySelector('#mce-EMAIL');
-            let error = hasError(emailField);
-
-            if (error) {
-                showError(emailField, error);
-                emailField.focus();
-                return;
-            }
-
-            submitMailChimpForm(this);
-
-        }, false);
-
-    }; // end ssMailChimpForm
+            form.reset(); // Reset the form fields
+            console.log('Email sent successfully:', response);
+            return 'OK';
+        } catch (error) {
+            console.error('Error:', error);
+            return 'NOK';
+        }
+    };
 
 
    /* alert boxes
@@ -504,12 +404,26 @@
         ssPreloader();
         ssMobileMenu();
         ssSwiper();
-        ssMailChimpForm();
         ssAlertBoxes();
         ssMoveTo();
         ssSliderAuto();
         ssLanguageSwitch();
 
     })();
+
+    // Attach the event listener to the form
+    document.getElementById('contact-form').addEventListener('submit', async (event) => {
+        const result = await ssEmailJS(event);
+        const successBox = document.querySelector('.alert-box.alert-box--success');
+        const errorBox = document.querySelector('.alert-box.alert-box--error');
+        
+        if (result === 'OK') {
+            successBox.classList.add('visible');
+            setTimeout(() => successBox.classList.remove('visible'), 5000);
+        } else {
+            errorBox.classList.add('visible');
+            setTimeout(() => errorBox.classList.remove('visible'), 5000);
+        }
+    });
 
 })(document.documentElement);

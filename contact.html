@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact - DAYNEKO</title>
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "UuM_gnPV565lP_kkT",
+            });
+        })();
+    </script>
     <script>
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
@@ -108,33 +118,40 @@
                     <div class="row contactform">
                         <div class="column xl-12">
                             <h3 class="u-add-bottom" data-i18n="contact_form"></h3>
-                            <form>
-                                <div>
-                                    <label for="sampleInput" data-i18n="contact_email"></label>
-                                    <input class="u-fullwidth" type="email" data-i18n="contact_email_placeholder" id="sampleInput">
-                                </div>
-                                <div>
-                                    <label for="sampleReason" data-i18n="contact_reason"></label>
-                                    <div class="ss-custom-select">
-                                        <select class="u-fullwidth" id="sampleReason">
-                                            <option value="Option 1" data-i18n="contact_reason_1"></option>
-                                            <option value="Option 2" data-i18n="contact_reason_2"></option>
-                                            <option value="Option 3" data-i18n="contact_reason_3"></option>
-                                            <option value="Option 4" data-i18n="contact_reason_4"></option>
-                                        </select>
-                                    </div>
+                            <form id="contact-form">
+                                <label for="email" data-i18n="contact_email"></label>
+                                <input class="u-fullwidth" type="email" data-i18n="contact_email_placeholder" id="email" name="email" required>
+                                <label for="reason" data-i18n="contact_reason"></label>
+                                <div class="ss-custom-select">
+                                    <select class="u-fullwidth" id="reason" name="reason">
+                                        <option value="Lecture" data-i18n="contact_reason_1"></option>
+                                        <option value="Seminar" data-i18n="contact_reason_2"></option>
+                                        <option value="Consultation" data-i18n="contact_reason_3"></option>
+                                        <option value="Other" data-i18n="contact_reason_4"></option>
+                                    </select>
                                 </div>
                                 
-                                <label for="sampleMessage" data-i18n="contact_message"></label>
-                                <textarea class="u-fullwidth" data-i18n="contact_message_placeholder" id="sampleMessage"></textarea>
+                                <label for="message" data-i18n="contact_message"></label>
+                                <textarea class="u-fullwidth" data-i18n="contact_message_placeholder" id="message" name="message" required></textarea>
             
                                 <label class="u-add-bottom">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="checkbox">
                                     <span class="label-text" data-i18n="contact_checkbox"></span>
                                 </label>
                             
                                 <input class="btn--primary u-fullwidth" type="submit" data-i18n="contact_button">
                             </form>
+
+                            <div class="alert-box alert-box--error">
+                                <p data-i18n="contact_status_error"></p>
+                                <span class="alert-box__close"></span>
+                            </div><!-- end error -->
+                                    
+                            <div class="alert-box alert-box--success">
+                                <p data-i18n="contact_status_success"></p>
+                                <span class="alert-box__close"></span>
+                            </div><!-- end success -->
+                            
                         </div>
                     </div> <!-- contactform -->
 

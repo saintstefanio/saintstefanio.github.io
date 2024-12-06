@@ -77,6 +77,8 @@
     "contact_message_placeholder": "Your message here",
     "contact_checkbox": "Send a copy to yourself",
     "contact_button": "Send",
+    "contact_status_success": "Your message has been sent successfully.",
+    "contact_status_error": "An error occurred while sending your message. Please try again.",
     "contact_testimonials_pretitle": "Testimonials",
     "contact_testimonials_title": "Reviews From Real Clients"
 }

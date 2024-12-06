@@ -77,6 +77,8 @@
     "contact_message_placeholder": "Jūsu ziņojums šeit",
     "contact_checkbox": "Nosūtīt kopiju sev",
     "contact_button": "Nosūtīt",
+    "contact_status_success": "Jūsu ziņojums ir veiksmīgi nosūtīts.",
+    "contact_status_error": "Radās kļūda, nosūtot jūsu ziņojumu. Lūdzu, mēģiniet vēlreiz.",
     "contact_testimonials_pretitle": "Atsauksmes",
     "contact_testimonials_title": "Atsauksmes No Reāliem Klientiem"
 }
