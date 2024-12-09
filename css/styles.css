@@ -4780,7 +4780,7 @@ td:last-child {
     font-family: var(--font-1);
     font-size  : var(--text-size);
     line-height: var(--vspace-1_25);
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     margin-bottom: var(--vspace-2);
 }
 
