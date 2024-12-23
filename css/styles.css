@@ -3647,6 +3647,7 @@ td:last-child {
 	margin-top   : 0;
 	margin-bottom: var(--vspace-1_25);
 	color        : var(--color-3);
+	width        : 50%;
 }
 
 .s-intro__content-media {
@@ -3866,6 +3867,7 @@ td:last-child {
 
 	.s-intro__content-title {
 		font-size: clamp(2.5rem, 8vw, 9.4rem);
+		width        : 50%;
 	}
 
 	.s-intro__content-title br {
