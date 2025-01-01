@@ -1523,6 +1523,12 @@ hr.fancy::before {
 	line-height: var(--vspace-1_25);
 }
 
+@media screen and (max-width: 1200px) {
+	.pageintro p {
+		text-align: center;
+	}
+}
+
 @media screen and (max-width: 800px) {
 
 	.lead,
@@ -2771,6 +2777,7 @@ td:last-child {
 	color      : var(--color-1);
 	transform  : translate(0.2em, 0);
 	margin-top : 0;
+	margin-bottom: 8px;
 }
 
 .text-display-title {
@@ -2913,7 +2920,7 @@ td:last-child {
  * ## testimonials
  * -------------------------------------------------------------------- */
 .s-testimonials {
-	padding-top     : var(--vspace-4);
+	padding-top     : var(--vspace-3);
 	padding-bottom  : var(--vspace-3);
 	background-color: var(--color-3);
 }
@@ -3044,7 +3051,7 @@ td:last-child {
 
 
 .s-activities {
-	padding-top     : var(--vspace-4);
+	padding-top     : var(--vspace-3);
 	padding-bottom  : var(--vspace-3);
 }
 
@@ -3960,7 +3967,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-about {
 	padding-top     : var(--vspace-6);
-	padding-bottom  : var(--vspace-6);
+	padding-bottom  : var(--vspace-3);
 	background-color: var(--color-2-dark);
 	color           : var(--color-3);
 }
@@ -4012,7 +4019,7 @@ td:last-child {
 @media screen and (max-width: 800px) {
 	.s-about {
 		padding-top   : var(--vspace-4);
-		padding-bottom: var(--vspace-5);
+		padding-bottom: var(--vspace-3);
 	}
 
 	.s-about__content-imgbg {
@@ -4029,7 +4036,7 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-expertise {
-	padding-top   : var(--vspace-4);
+	padding-top   : var(--vspace-3);
 	padding-bottom: var(--vspace-3);
 }
 
@@ -4043,7 +4050,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
 	.s-expertise {
-		padding-top: var(--vspace-5);
+		padding-top: var(--vspace-3);
 	}
 }
 
@@ -4055,7 +4062,7 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-	padding-top     : var(--vspace-4);
+	padding-top     : var(--vspace-3);
 	padding-bottom  : var(--vspace-1);
 	background-color: var(--color-3);
 }
