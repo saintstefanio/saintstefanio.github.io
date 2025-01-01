@@ -4789,6 +4789,19 @@ td:last-child {
 .events-list__meta-item-icon {
     font-size: var(--text-lg);
     color: var(--color-1);
+	width: 24px;
+	height: 24px;
+	background-image : url(../images/icons/icon-check.svg);
+	background-repeat: no-repeat;
+  	background-size: contain;
+	content: "";
+	display: inline-block;
+	flex-shrink: 0;
+}
+
+.events-list__meta-item-text {
+    font-size  : calc(var(--text-md) * 0.8);
+    color: var(--color-text-dark);
 }
 
 .events-list__meta-item-text {
@@ -4814,7 +4827,7 @@ td:last-child {
 	padding-left: 1.5rem;
 	border-bottom: 1px solid #e0e0e0;
 	position: relative;
-	text-align: justify;
+	text-align: left;
   }
   
   .events-list__meta li::before {
