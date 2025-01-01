@@ -2942,7 +2942,7 @@ td:last-child {
 }
 
 .testimonials {
-	margin-top: var(--vspace-3);
+	margin-top: var(--vspace-1_5);
 	position  : relative;
 }
 
@@ -4068,7 +4068,7 @@ td:last-child {
 }
 
 .s-clients__content-block:first-child {
-	margin-bottom: var(--vspace-1_75);
+	margin-bottom: var(--vspace-1_25);
 }
 
 .s-clients__content-block:first-child .grid-block {
