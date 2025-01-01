@@ -1523,12 +1523,6 @@ hr.fancy::before {
 	line-height: var(--vspace-1_25);
 }
 
-@media screen and (max-width: 1200px) {
-	.pageintro p {
-		text-align: center;
-	}
-}
-
 @media screen and (max-width: 800px) {
 
 	.lead,
@@ -4781,10 +4775,9 @@ td:last-child {
 
 .events-list__description {
     font-family: var(--font-1);
-    font-size  : var(--text-size);
-    line-height: var(--vspace-1_25);
+    font-size  : inherit;
     color: var(--color-text-dark);
-    margin-bottom: var(--vspace-2);
+    margin-bottom: var(--vspace-1);
 }
 
 .events-list__meta-item {
@@ -4818,9 +4811,10 @@ td:last-child {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	padding-right: 2rem;
-	padding-left: 4.8rem;
+	padding-left: 1.5rem;
 	border-bottom: 1px solid #e0e0e0;
 	position: relative;
+	text-align: justify;
   }
   
   .events-list__meta li::before {
@@ -4834,3 +4828,26 @@ td:last-child {
 	top: 1.8rem;
 	left: .8rem;
   }
+
+@media screen and (max-width: 1200px) {
+	.entry__primary p {
+		text-align: center;
+	}
+
+	.pageintro p {
+		text-align: center;
+	}
+}
+
+.events-grid-list-items {
+	--gap                : calc(var(--gutter) * 2);
+	--min-width          : 460px;
+	display              : grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width), 100%), 1fr));
+	-moz-column-gap      : var(--gap);
+	column-gap           : var(--gap);
+}
+
+.events-grid-list-items__item {
+	margin-bottom: var(--vspace-0_5);
+}
