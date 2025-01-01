@@ -3921,11 +3921,9 @@ td:last-child {
 		transition-delay: 2.1s;
 		bottom          : 0;
 	}
-}
 
-@media screen and (max-width: 800px) {
 	.s-intro__scroll-down span {
-		font-size: var(--text-sm);
+		display: none;
 	}
 }
 
@@ -3951,10 +3949,6 @@ td:last-child {
 
 	.s-intro__scroll-down {
 		margin-left: var(--vspace-0_25);
-	}
-
-	.s-intro__scroll-down span {
-		display: none;
 	}
 }
 
